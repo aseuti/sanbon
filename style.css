@@ -1,0 +1,163 @@
+
+/* Custom animations and additional styling */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom button animations */
+.btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4) !important;
+}
+
+.btn-primary:active {
+  transform: translateY(0) !important;
+}
+
+/* Number badge styling */
+.number-badge {
+  background: linear-gradient(135deg, #10B981, #059669);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-width: 60px;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+  animation: bounceIn 0.6s ease forwards;
+  opacity: 0;
+  transform: scale(0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse animation for the main container */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+/* Loading animation */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .number-badge {
+    font-size: 1rem;
+    padding: 10px 14px;
+    min-width: 50px;
+  }
+}
+
+/* SweetAlert2 custom styling */
+.swal2-popup {
+  border-radius: 20px !important;
+  font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+.swal2-title {
+  font-weight: 700 !important;
+  color: #374151 !important;
+}
+
+.swal2-content {
+  color: #6B7280 !important;
+}
+
+/* Icon animations */
+.fa-broom {
+  animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.fa-star {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
